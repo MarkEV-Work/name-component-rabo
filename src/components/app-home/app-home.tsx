@@ -12,6 +12,7 @@ export class AppHome {
         <p>
           Welcome to the Stencil App Starter. You can use this starter to build entire apps all with web components using Stencil! Check out our docs on{' '}
           <a href="https://stenciljs.com">stenciljs.com</a> to get started.
+          <img src="./assets/icon/icon.png"></img>
         </p>
 
         <stencil-route-link url="/profile/stencil">

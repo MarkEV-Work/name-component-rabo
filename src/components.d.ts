@@ -14,6 +14,8 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface NameMaker {
+    }
 }
 declare global {
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
@@ -34,10 +36,17 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLNameMakerElement extends Components.NameMaker, HTMLStencilElement {
+    }
+    var HTMLNameMakerElement: {
+        prototype: HTMLNameMakerElement;
+        new (): HTMLNameMakerElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "name-maker": HTMLNameMakerElement;
     }
 }
 declare namespace LocalJSX {
@@ -48,10 +57,13 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface NameMaker {
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "name-maker": NameMaker;
     }
 }
 export { LocalJSX as JSX };
@@ -61,6 +73,7 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "name-maker": LocalJSX.NameMaker & JSXBase.HTMLAttributes<HTMLNameMakerElement>;
         }
     }
 }
